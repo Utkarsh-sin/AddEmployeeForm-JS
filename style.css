@@ -1,0 +1,46 @@
+*{
+    margin:10px 10px;
+    color:white;
+    background-color: black;
+}
+input{
+    min-width: 25vw;
+    padding:10px;
+    margin-top:10px; 
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    margin-left: -5px;
+}
+
+button{
+    font-size: medium;
+    padding: 10px 30px;
+    background-color: white;
+    color: black;
+}
+
+#table{
+    color: #787671;
+}
+.success{
+    color: green;
+}
+.error{
+    color: red;
+}
+td{
+    padding: 10px 20px;
+}
+tr{
+    outline: thin solid;
+    border-radius: 5px;
+}
+table {
+    border-collapse:separate; 
+    border-spacing: 0 1em;
+}
+.table{
+    display: flex;
+}
