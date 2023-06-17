@@ -44,3 +44,7 @@ table {
 .table{
     display: flex;
 }
+
+.button{
+    max-widht:50%;
+}

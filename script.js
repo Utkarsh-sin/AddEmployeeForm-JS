@@ -36,15 +36,21 @@ function tableCreate(){
         td4.appendChild(document.createTextNode("Age :"+employee[i].age));
         tr.appendChild(td4);   
         
-        // let button = document.createElement('button');
-        // button.type="submit";
-        // button.innerHTML="Delete User";
-        // document.body.appendChild(button)
-
-        
+        let button = document.createElement('input');
+        button.type="button";
+        button.value="Delete User";
+        button.onClick=`del(${employee[i].id})`;
+        button.class="delete";
+        tr.appendChild(button);
     }
 
     document.getElementById("table").innerHTML="";
     document.getElementById("table").appendChild(tbl);
 
+}
+
+function del(id){
+    employee.splice(id,1);
+    console.log(id);
+    tableCreate();
 }
