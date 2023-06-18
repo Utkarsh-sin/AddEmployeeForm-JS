@@ -27,21 +27,23 @@ function tableCreate(){
         td1.appendChild(document.createTextNode(employee[i].id+"."));
         tr.appendChild(td1);
         let td2 = document.createElement('td');
-        td2.appendChild(document.createTextNode("Name :"+employee[i].name));
+        td2.appendChild(document.createTextNode("Name : "+employee[i].name));
         tr.appendChild(td2);
         let td3 = document.createElement('td');
-        td3.appendChild(document.createTextNode("Profession :"+employee[i].profession));
+        td3.appendChild(document.createTextNode("Profession: "+employee[i].profession));
         tr.appendChild(td3);
         let td4 = document.createElement('td');
-        td4.appendChild(document.createTextNode("Age :"+employee[i].age));
+        td4.appendChild(document.createTextNode("Age:"+employee[i].age));
         tr.appendChild(td4);   
         
         let button = document.createElement('input');
-        button.type="button";
+        button.type="submit";
         button.value="Delete User";
-        button.onClick=`del(${employee[i].id})`;
-        button.class="delete";
-        tr.appendChild(button);
+        button.onClick=function () {
+            del(employee[i].id);
+          };
+        button.className="delete";
+        tbl.appendChild(button);
     }
 
     document.getElementById("table").innerHTML="";
@@ -53,4 +55,5 @@ function del(id){
     employee.splice(id,1);
     console.log(id);
     tableCreate();
+    
 }

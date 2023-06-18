@@ -48,3 +48,12 @@ table {
 .button{
     max-widht:50%;
 }
+table{
+    display: inline;
+}
+.delete{
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    margin-left: 10px;
+}
